@@ -34,20 +34,20 @@ export const defingConfig = defineConfig({
 
   /* Configure projects for major browsers */
   projects: [
-    {
-      name: "chromium",
-      use: { ...devices["Desktop Chrome"] },
-    },
+    // {
+    //   name: "chromium",
+    //   use: { ...devices["Desktop Chrome"] },
+    // },
 
-    {
-      name: "firefox",
-      use: { ...devices["Desktop Firefox"] },
-    },
+    // {
+    //   name: "firefox",
+    //   use: { ...devices["Desktop Firefox"] },
+    // },
 
-    {
-      name: "webkit",
-      use: { ...devices["Desktop Safari"] },
-    },
+    // {
+    //   name: "webkit",
+    //   use: { ...devices["Desktop Safari"] },
+    // },
 
     /* Test against mobile viewports. */
     // {
@@ -88,18 +88,18 @@ const config: PlaywrightTestConfig = {
 
   //? Run the test in different browser concurrently
   projects: [
-    {
-      name: "chrome",
-      use: { ...devices["Desktop Chrome"] },
-    },
-    {
-      name: "firefox",
-      use: { ...devices["Desktop Firefox"] },
-    },
-    {
-      name: "edge",
-      use: { ...devices["Desktop Edge"] },
-    },
+    // {
+    //   name: "chrome",
+    //   use: { ...devices["Desktop Chrome"] },
+    // },
+    // {
+    //   name: "firefox",
+    //   use: { ...devices["Desktop Firefox"] },
+    // },
+    // {
+    //   name: "edge",
+    //   use: { ...devices["Desktop Edge"] },
+    // },
   ],
   use: {
     baseURL: "https://ecommerce-playground.lambdatest.io/index.php?", //? Set BaseURL

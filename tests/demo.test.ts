@@ -19,16 +19,16 @@ const capabilities = {
   },
 };
 
-test("Login Test", async () => {
+test("Login Test", async ({ page  }) => {
   // const browser = await chromium.launch({ headless: false });
-  const strCAP = encodeURIComponent(JSON.stringify(capabilities));
-  const browser = await chromium.connect(
-    // `wss://cdp.lambdatest.com/playwright?capabilities=${strCAP}`
-    { wsEndpoint: "http://localhost:4444" }
-  );
+  // const strCAP = encodeURIComponent(JSON.stringify(capabilities));
+  // const browser = await chromium.connect(
+  //   // `wss://cdp.lambdatest.com/playwright?capabilities=${strCAP}`
+  //   { wsEndpoint: "http://localhost:4444" }
+  // );
 
-  const context = await browser.newContext(); //? 1 page
-  const page = await context.newPage(); //? tab in 1 page
+  // const context = await browser.newContext(); //? 1 page
+  // const page = await context.newPage(); //? tab in 1 page
 
   const URL = "https://ecommerce-playground.lambdatest.io/";
   await page.goto(URL);
@@ -44,15 +44,15 @@ test("Login Test", async () => {
   //? Open New Tab
   const URL2 =
     "https://ecommerce-playground.lambdatest.io/index.php?route=account/register";
-  const page2 = await context.newPage(); //? tab in 1 page
-  await page2.goto(URL2);
+  // const page2 = await context.newPage(); //? tab in 1 page
+  await page.goto(URL2);
   await page.waitForTimeout(5000);
 
   //? Open New Browser Window
-  const context2 = await browser.newContext();
-  const newPage = await context2.newPage();
-  await newPage.goto(URL);
-  await newPage.waitForTimeout(5000);
+  // const context2 = await browser.newContext();
+  // const newPage = await context2.newPage();
+  // await newPage.goto(URL);
+  // await newPage.waitForTimeout(5000);
 });
 
 // https://playwright.dev/
