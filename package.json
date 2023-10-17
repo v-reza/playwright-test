@@ -8,7 +8,7 @@
     "record": "npx playwright codegen",
     "report": "npx playwright show-report",
     "ui": "npx playwright test --ui",
-    "build": "npx playwright test --ui",
+    "build": "npx npx playwright install chromium && npx playwright test --ui",
     "bui": "npx playwright test --ui-port=8080 --ui-host=localhost"
   },
   "keywords": [],
