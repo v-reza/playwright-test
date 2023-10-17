@@ -8,7 +8,7 @@
     "record": "npx playwright codegen",
     "report": "npx playwright show-report",
     "ui": "npx playwright test --ui",
-    "build": " npx playwright install && npx playwright test --ui --debug",
+    "build": " npx playwright install && npx playwright test --ui --debug --config=playwright.config.ts",
     "bui": "npx playwright test --ui-port=8080 --ui-host=localhost"
   },
   "keywords": [],
