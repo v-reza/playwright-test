@@ -1,0 +1,24 @@
+{
+  "name": "ocms-admin",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx playwright test",
+    "record": "npx playwright codegen",
+    "report": "npx playwright show-report",
+    "ui": "npx playwright test --ui",
+    "build": "npx playwright test --ui",
+    "bui": "npx playwright test --ui-port=8080 --ui-host=localhost"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.38.1",
+    "@types/node": "^20.8.2"
+  },
+  "dependencies": {
+    "moment": "^2.29.4"
+  }
+}
