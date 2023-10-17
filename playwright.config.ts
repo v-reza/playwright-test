@@ -29,8 +29,9 @@ export const defingConfig = defineConfig({
 
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
     trace: "on-first-retry",
-    headless: false,
+    headless: true,
   },
+  
 
   /* Configure projects for major browsers */
   projects: [
@@ -103,7 +104,7 @@ const config: PlaywrightTestConfig = {
   ],
   use: {
     baseURL: "https://ecommerce-playground.lambdatest.io/index.php?", //? Set BaseURL
-    headless: false,
+    headless: true,
     screenshot: "on",
     video: "retain-on-failure",
     launchOptions: {
